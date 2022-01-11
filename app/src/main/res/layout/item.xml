@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="isFruitsList"
+            type="com.example.restaurantapp.FoodData" />
+
+
+    </data>
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius = "10dp"
+        app:cardElevation="10dp"
+        app:cardUseCompatPadding ="true"
+        card_view:cardCornerRAdius="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/foodImg"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_marginLeft="10dp"
+                android:scaleType="center"
+                android:src="@drawable/donut" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/fruitsName"
+                    android:textStyle="bold"
+                    android:text="@{isFruitsList.foodName}"
+                    android:textColor="@color/purple_500"
+                    android:textSize="20sp"
+                    android:hint="name"
+                    android:layout_marginLeft="40dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+               <!-- <TextView
+                    android:id="@+id/fruitsCal"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp"
+                    android:hint="info"
+                    android:text="@{isFruitsList.foodInfo}"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratings"
+                    android:text="5"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="190dp"
+                    android:drawableRight="@drawable/ic_baseline_star_rate_24"
+                    android:drawableTint="@color/purple_500"
+                    android:drawablePadding="10dp"/></LinearLayout>
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="400"
+                    android:layout_marginLeft="280dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:textColor="@color/purple_500"/>
+            </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+</layout>
